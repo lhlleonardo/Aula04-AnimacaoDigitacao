@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(25, 25, 25);
+    /*background-color: #191919 */
+}
+
+.texto{
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.75);
+    font-family: monospace;
+    font-size: 20px;
+    margin: 0 auto;
+    animation: cursor 1s steps(40) infinite, digitacao 4s steps(40) 1s normal;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@keyframes cursor {
+    from {
+        border-right-color: (255, 255, 255, 0.75);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes digitacao {
+    from {
+        width: 0;
+    }
+    to{
+        width: 345px;
+    }
+}
